@@ -42,12 +42,17 @@ Status: Downloaded newer image for busybox:latest
 
 ## 导出镜像
 ```bash
-docker save -o busybox.tar busybox:latest
+$ docker save -o busybox.tar busybox:latest
 ```
 
 ## 导入镜像
 ```bash
-docker load -i busybox.tar 
+$ docker load -i busybox.tar 
+```
+
+## 构建镜像
+```bash
+$ docker build -t test .
 ```
 
 ## 运行容器
