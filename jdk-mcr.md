@@ -39,3 +39,8 @@ $ docker tag jdk-mcr vwarship/jdk-mcr:latest
 ```bash
 $ docker push vwarship/jdk-mcr:latest
 ```
+
+## 参考资料
+* [glatard/matlab-compiler-runtime-docker](https://hub.docker.com/r/glatard/matlab-compiler-runtime-docker/~/dockerfile/)
+* [fbenz/docker-java-matlab](https://hub.docker.com/r/fbenz/docker-java-matlab/~/dockerfile/)
+* [elviejokike/java-matlab](https://hub.docker.com/r/elviejokike/java-matlab/~/dockerfile/)
