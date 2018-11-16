@@ -1,4 +1,7 @@
-# 创建 JDK-MCR 镜像
+# jdk-mcr 镜像
+* Linux 4.9.93
+* OpenJDK 11.0.1
+* MATLAB Compiler Runtime R2018b (9.5)
 
 ## Dockerfile
 ```
@@ -40,7 +43,13 @@ $ docker tag jdk-mcr vwarship/jdk-mcr:latest
 $ docker push vwarship/jdk-mcr:latest
 ```
 
+## 拉取镜像
+```bash
+$ docker pull vwarship/jdk-mcr:latest
+```
+
 ## 参考资料
+* [MATLAB Compiler Runtime](https://www.mathworks.com/products/compiler/matlab-runtime.html)
 * [glatard/matlab-compiler-runtime-docker](https://hub.docker.com/r/glatard/matlab-compiler-runtime-docker/~/dockerfile/)
 * [fbenz/docker-java-matlab](https://hub.docker.com/r/fbenz/docker-java-matlab/~/dockerfile/)
 * [elviejokike/java-matlab](https://hub.docker.com/r/elviejokike/java-matlab/~/dockerfile/)
