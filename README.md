@@ -6,5 +6,5 @@
 * [存储卷](volume.md)
 
 ## Docker 镜像
-* [helloworld 镜像](docker-images/helloworld/helloworld.md)
-* [jdk-mcr 镜像](docker-images/jdk-mcr/jdk-mcr.md)
+* [helloworld 镜像](docker-images/helloworld)
+* [jdk-mcr 镜像](docker-images/jdk-mcr)
