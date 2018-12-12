@@ -123,6 +123,11 @@ HOSTNAME=1b350cb662c0
 HOME=/root
 ```
 
+## 设置环境变量
+```bash
+$ docker run --rm -p 8001:80 --name APP1 --env NAME=APP1 vwarship/hello-world:latest
+```
+
 ## 自动重启容器，使用回退策略
 ```bash
 $ docker run -d --name backoff-detector --restart always busybox:latest date
