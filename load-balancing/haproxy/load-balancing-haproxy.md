@@ -26,8 +26,3 @@ docker run --rm -d --link APP1:APP1 --link APP2:APP2 -p 8000:8000 -v ~/GitHub/wa
 * [HAProxy Stats](http://localhost:8000/admin?stats)
 
 ## 参考资料
-* [alpine](https://hub.docker.com/_/alpine/)
-* [cassandra](https://hub.docker.com/_/cassandra/)
-* [Cassandra](https://cassandra.apache.org)
-* [CREATE KEYSPACE](https://docs.datastax.com/en/cql/3.3/cql/cql_reference/cqlCreateKeyspace.html)
-* [Querying from system.schema_keyspaces generates code=2200 [Invalid query]](https://dba.stackexchange.com/questions/149977/querying-from-system-schema-keyspaces-generates-code-2200-invalid-query)

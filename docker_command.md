@@ -105,13 +105,22 @@ $ docker logs test
 $ docker run --detach --name test busybox:latest sleep 10000
 ```
 
-## 在运行的容器中运行命令
+## 在容器中运行的进程
 ```bash
 $ docker exec test ps
 
 PID   USER     TIME  COMMAND
     1 root      0:00 sleep 10000
     8 root      0:00 ps
+```
+
+## 查看容器的环境变量
+```bash
+$ docker exec test env
+
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+HOSTNAME=1b350cb662c0
+HOME=/root
 ```
 
 ## 自动重启容器，使用回退策略
