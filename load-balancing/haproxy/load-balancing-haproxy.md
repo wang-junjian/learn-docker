@@ -26,3 +26,13 @@ docker run --rm -d --link APP1:APP1 --link APP2:APP2 -p 8000:8000 -v ~/GitHub/wa
 * [HAProxy Stats](http://localhost:8000/admin?stats)
 
 ## 参考资料
+* [vwarship/hello-world](https://hub.docker.com/r/vwarship/hello-world/)
+* [How to Use HAProxy for Load Balancing](https://www.linode.com/docs/uptime/loadbalancing/how-to-use-haproxy-for-load-balancing/)
+* [Hitless Reloads with HAProxy – HOWTO](https://www.haproxy.com/blog/hitless-reloads-with-haproxy-howto/#configuration-file-update)
+* [HAProxy Management Guide](https://www.haproxy.org/download/1.7/doc/management.txt)
+* [HAProxy Configuration Manual](https://cbonte.github.io/haproxy-dconv/1.7/configuration.html)
+* [Docker Documentation](https://docs.docker.com)
+* [haproxy.cfg](https://gist.github.com/strangeminds/1287134)
+* [Layer4 “Connection refused” with haproxy](https://stackoverflow.com/questions/40729125/layer4-connection-refused-with-haproxy)
+* [KubeCon EU 2016: Creating an Advanced Load Balancing Solution for Kubernetes with NGINX](https://www.slideshare.net/kubecon/kubecon-eu-2016-creating-an-advanced-load-balancing-solution-for-kubernetes-with-nginx)
+
