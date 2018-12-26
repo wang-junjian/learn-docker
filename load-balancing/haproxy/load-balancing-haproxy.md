@@ -22,7 +22,7 @@ docker run --rm -d --link APP1:APP1 --link APP2:APP2 -p 8000:8000 -v ~/GitHub/wa
 ## 查看
 * [APP1](http://localhost:8001)
 * [APP2](http://localhost:8002)
-* [HAProxy](http://localhost:8000)
+* [HAProxy 负载均衡](http://localhost:8000)
 * [HAProxy Stats](http://localhost:8000/admin?stats)
 
 ## 参考资料
