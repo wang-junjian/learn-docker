@@ -41,6 +41,19 @@ sudo yum remove docker-ce
 sudo rm -rf /var/lib/docker
 ```
 
+## 离线安装
+* [下载安装包](https://download.docker.com/linux/ubuntu/dists/)（containerd.io, docker-ce-cli, docker-ce）
+```bash
+wget https://download.docker.com/linux/ubuntu/dists/bionic/pool/stable/amd64/containerd.io_1.2.2-3_amd64.deb
+wget https://download.docker.com/linux/ubuntu/dists/bionic/pool/stable/amd64/docker-ce-cli_18.09.2~3-0~ubuntu-bionic_amd64.deb
+wget https://download.docker.com/linux/ubuntu/dists/bionic/pool/stable/amd64/docker-ce_18.09.2~3-0~ubuntu-bionic_amd64.deb
+```
+
+* 安装
+```bash
+dpkg -i *.deb
+```
+
 ## FAQ
 * 错误信息：
 
@@ -74,3 +87,4 @@ sudo rm -r /var/run/yum.pid
 ## 参考资料
 
 * [Get Docker CE for CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
+* [Get Docker CE for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
