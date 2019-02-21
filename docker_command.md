@@ -85,6 +85,20 @@ Hello World
 $ docker rm -vf $(docker ps -a -q)
 ```
 
+## 删除当前状态为退出的所有容器
+* 方法1
+```bash
+$ docker container prune
+
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+```
+
+* 方法2
+```bash
+$ docker rm $(docker ps -q -f status=exited)
+```
+
 ## 启动容器
 ```bash
 $ docker start test
@@ -145,3 +159,6 @@ Sun Oct 21 10:40:06 UTC 2018
 Sun Oct 21 10:40:19 UTC 2018
 Sun Oct 21 10:40:45 UTC 2018
 ```
+
+## 参考资料
+* [如何批量删除Docker中已经停止的容器](https://www.linuxidc.com/Linux/2018-02/150708.htm)
