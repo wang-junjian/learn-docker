@@ -55,6 +55,15 @@ $ docker load -i busybox.tar
 $ docker build -t test .
 ```
 
+## 查看镜像的层
+```bash
+$ docker history busybox:latest
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+59788edf1f3e        5 months ago        /bin/sh -c #(nop)  CMD ["sh"]                   0B                  
+<missing>           5 months ago        /bin/sh -c #(nop) ADD file:63eebd629a5f7558c…   1.15MB              
+```
+    > docker history 的输出中的 <missing> 行指示那些层在其他系统上构建并且已经不可用了。可以忽略这些。
+
 ## 运行容器
 ```bash
 $ docker run --name test busybox:latest echo Hello World
