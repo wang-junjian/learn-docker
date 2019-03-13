@@ -123,6 +123,17 @@ $ docker stop test
 $ docker logs test
 ```
 
+## 查看容器更改
+```bash
+$ docker-training wjj$ docker run -it --name test busybox:latest
+/ # touch log.txt
+
+$ docker diff test
+A /log.txt
+C /root
+A /root/.ash_history
+```
+
 ## 在后台运行一个容器
 ```bash
 $ docker run --detach --name test busybox:latest sleep 10000
