@@ -7,8 +7,49 @@ uname -a
 Linux centos7 3.10.0-862.3.2.el7.x86_64 #1 SMP Mon May 21 23:36:36 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
 ```
 
-## 安装仓库
+## 在线安装 DOCKER CE
 
+### Ubuntu18
+* 更新apt包索引
+```bash
+sudo apt-get update
+```
+
+* 安装包以允许apt通过HTTPS使用存储库
+```bash
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+```
+
+* 添加Docker的官方GPG密钥
+```bash
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+
+* 使用以下命令设置稳定存储库
+```bash
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+```
+
+* 更新apt包索引
+```bash
+sudo apt-get update
+```
+
+* 安装最新版本的Docker CE和containerd
+```bash
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+
+### CentOS7
+* 安装仓库
 ```bash
 sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
@@ -16,29 +57,25 @@ sudo yum-config-manager --enable docker-ce-edge
 sudo yum-config-manager --enable docker-ce-test
 ```
 
-## 安装 DOCKER CE
-
+* 安装 DOCKER CE
 ```bash
 sudo yum install docker-ce
 ```
 
-## 启动 Docker
-
+* 启动 Docker
 ```bash
 sudo systemctl start docker
 ```
 
-## 验证 Docker
-
-```bash
-sudo docker run hello-world
-```
-
-## 卸载 DOCKER CE
-
+* 卸载 DOCKER CE
 ```bash
 sudo yum remove docker-ce
 sudo rm -rf /var/lib/docker
+```
+
+### 验证 Docker
+```bash
+sudo docker run hello-world
 ```
 
 ## 离线安装 DOCKER CE
@@ -132,6 +169,13 @@ rpm -ivh containerd.io-1.2.2-3.3.el7.x86_64.rpm
 rpm -ivh docker-ce-selinux-17.03.3.ce-1.el7.noarch.rpm
 rpm -ivh docker-ce-cli-18.09.2-3.el7.x86_64.rpm
 rpm -ivh docker-ce-18.09.2-3.el7.x86_64.rpm
+```
+
+## [安装 Docker Compose](https://docs.docker.com/compose/install/)
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
 ```
 
 ## FAQ
